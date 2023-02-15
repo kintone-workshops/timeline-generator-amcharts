@@ -10,7 +10,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 (function () {
   'use strict';
   // Set Custom View's ID in .env
-  const customViewID = Number(process.env.REACT_APP_VIEW_ID);
+  const customViewID = Number(process.env.VIEW_ID);
   // Increment to confirm script version on Kintone
   const scriptVer = '1.0.1';
   console.log(`\nScript version: ${scriptVer}\n\n`);
