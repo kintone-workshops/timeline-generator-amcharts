@@ -26,7 +26,6 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
     }
 
     function App() {
-      const chart = useRef(null);
 
       useLayoutEffect(() => {
         // Color HEX code for the political parties
@@ -38,9 +37,6 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
           'Unaffiliated': '#d5d5d5',
           'Whig': '#ebbd50'
         };
-
-        // Imgur's Image Hash
-        const imgCode = ['', 'gk1cP2u', '9FR7eva', 'aumfl2F', 'kx8BdCT', 'z6Yd9Lm', '4HLWKcB', 'mmTyKJ1', 'PCb7ly6', 'UgN4EA7', 'rVoiW4X', 'i3euA9w', 'kt92UVi', 'oo5aw5x', 'BZI7FTa', 'XLkIWAs', 'qB4GVSv', '5kAZ3NJ', 'drQysn9', 'UqvMVTH', 'Wte60Q6', '3DAK1C1', 'h6b7Vw5', 'ctHNmhA', '18zBca0', 'hb94eO2', '12hJdg0', 'Bl8oRVY', 'HQ1xV6H', 'pj4oAjR', 'QuzzGmm', 'zpE50Pa', '4zSuesA', 'mevGXAh', '5zq1fDg', 'EcUoEs2', 'S5BJfEO', 'bMW0Ltr', 'hutxiiz', 'hRBgyF1', 'gHP21eA', '3QtuHuW', 'XSwwVLh', 'wnbeSN1', 'Uw18RFA', '4APgxYd', 'S5wCZcd'];
 
         // Peak inside Kintone's data
         console.log('event.records');
@@ -84,7 +80,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
             // Time period's end; Term's end
             'end': rec.Date_0.value,
             // Icon inside the PinBullet; President's icon
-            //'icon': `https://i.imgur.com/${imgCode[rec.Record_number.value]}.png`,
+            'icon': `https://i.imgur.com/${rec.img.value}.png`,
             // Timeline category; only 1 is needed
             'category': ''
           }
@@ -122,8 +118,8 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
         pinBullet.locationX = 1; //Place the PinBullet at their term's start
         pinBullet.propertyFields.stroke = 'color';
         pinBullet.background.propertyFields.fill = 'color';
-        //pinBullet.image = new am4core.Image();
-        //pinBullet.image.propertyFields.href = 'icon';
+        pinBullet.image = new am4core.Image();
+        pinBullet.image.propertyFields.href = 'icon';
 
         // President's name over the icon
         const labelBullet = series.bullets.push(new am4charts.LabelBullet());
