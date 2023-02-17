@@ -1,7 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { useState, useEffect, useRef, useLayoutEffect } from "react";
-import getRecords from './requests/getRecords.js';
+import { useEffect } from "react";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import * as am4plugins_timeline from "@amcharts/amcharts4/plugins/timeline";
@@ -27,7 +26,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
     function App() {
 
-      useLayoutEffect(() => {
+      useEffect(() => {
         // Color HEX code for the political parties
         const partyColor = {
           'Democratic': '#2502fe',
@@ -147,10 +146,6 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
         chart.scrollbarX.exportable = false;
         dateAxis.tooltip.exportable = false;
       }, []);
-
-      return (
-        <div id="chartdiv" style={{ width: "100%", height: "500px" }}></div>
-      );
     }
 
     const rootElement = document.getElementById("root");
