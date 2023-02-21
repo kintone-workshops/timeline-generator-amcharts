@@ -15,33 +15,11 @@ Our free, live workshop will walk you through creating a Web Database App, setti
 * [Workshop Slides](#workshop-slides)
 * [Workshop Steps](#workshop-steps)
 * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
-  * [Step 1 - Create a Kintone App using `presidents.csv` file](#step-1---create-a-kintone-app-using-presidentscsv-file)
-  * [Step 2 - Create a Custom View](#step-2---create-a-custom-view)
 * [Connecting the Project to Kintone](#connecting-the-project-to-kintone)
-  * [Step 3 - Grab the Login Credentials, View ID, and App ID](#step-3---grab-the-login-credentials-view-id-and-app-id)
-  * [Step 4 - Create a `.env` File](#step-4---create-a-env-file)
-  * [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
 * [Coding Time](#coding-time)
-* [Step 6 - Editing index.js - Input Kintone data into the chart](#step-6---editing-indexjs---input-kintone-data-into-the-chart)
 * [Finish the Project](#finish-the-project)
-  * [Step 7 - Compile and upload the code to Kintone](#step-7---compile-and-upload-the-code-to-kintone)
-  * [Step 8 - Play with the Timeline chart on your Kintone App!](#step-8---play-with-the-timeline-chart-on-your-kintone-app)
 * [Debugging](#debugging)
-  * [Errors related to .env](#errors-related-to-env)
-  * [`npm install` command is not working](#npm-install-command-is-not-working)
-  * ["npm run upload" failed?](#npm-run-upload-failed)
-  * [Uncaught Error: Target container is not a DOM element](#uncaught-error-target-container-is-not-a-dom-element)
-  * [Not seeing all the presidents?](#not-seeing-all-the-presidents)
-  * [Not seeing a highlighted `TODO:`?](#not-seeing-a-highlighted-todo)
 * [amCharts + Kintone References](#amcharts--kintone-references)
-  * [Kintone Customize Uploader](#kintone-customize-uploader)
-  * [Kintone Events](#kintone-events)
-  * [amCharts Getting Started Tutorials](#amcharts-getting-started-tutorials)
-  * [amCharts Animation](#amcharts-animation)
-  * [Timeline](#timeline)
-  * [Plugin: Bullets](#plugin-bullets)
-  * [To have the PinBullets linkable to their Wiki\_URL, take a look at the following docs](#to-have-the-pinbullets-linkable-to-their-wiki_url-take-a-look-at-the-following-docs)
-  * [Other Parts](#other-parts)
 
 
 ## Completed Project
@@ -117,9 +95,7 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ## Create a Kintone Web Database App
 
-Genji TODO: Update
-
-### Step 1 - Create a Kintone App using `presidents.csv` file
+### Step 1 - Create a Kintone App using `presidents.csv` file <!-- omit in toc -->
 
 |                                                      |                                                      |
 | ---------------------------------------------------- | ---------------------------------------------------- |
@@ -135,7 +111,7 @@ Genji TODO: Update
 * Field Code is case sensitive
 * Field Code and options must be as specified in the steps, or the code will not work
 
-### Step 2 - Create a Custom View
+### Step 2 - Create a Custom View <!-- omit in toc -->
 * From App Settings, click on the **Views** tab
 * Click on the Plus Button ⊕ to create a View
 * Select `Custom view` under **Visible Fields and Column Order** section
@@ -153,7 +129,7 @@ Be sure to click the **Save** and **Activate App** buttons! 💪
 ---
 
 ## Connecting the Project to Kintone
-### Step 3 - Grab the Login Credentials, View ID, and App ID
+### Step 3 - Grab the Login Credentials, View ID, and App ID <!-- omit in toc -->
 
 Where to get get View ID and App ID?
 * Go to your Kintone App's custom view & grab the URL
@@ -166,7 +142,7 @@ Example:
 * App ID = `1`
 * View ID = `1234`
 
-### Step 4 - Create a `.env` File
+### Step 4 - Create a `.env` File <!-- omit in toc -->
 
 Using the [.env.example](.env.example) file as a template, create a `.env` file that will contain your login credentials and the Kintone App's View ID.
 
@@ -179,10 +155,10 @@ KINTONE_PASSWORD="your_password"
 VIEW_ID="1234"
 ```
 
-#### ⚠️ DO NOT DELETE THE [.env.example](.env.example) FILE!  <!-- omit in toc -->
+#### ⚠️ DO NOT DELETE THE [.env.example](.env.example) FILE!  <!-- omit in toc --> <!-- omit in toc -->
 [.env.example](.env.example) is used by env-cmd to verify that `.env` file is correctly configured.
 
-### Step 5 - Update customize-manifest.json with App ID
+### Step 5 - Update customize-manifest.json with App ID <!-- omit in toc -->
 The Kintone Customize Uploader uses [customize-manifest.json](customize-manifest.json) to determine where to upload the JavaScript file (_which Kintone App_).
 
 ```json
@@ -198,7 +174,7 @@ If this is NOT your first Kintone App, update the `app` value to your App ID.
 
 ---
 
-## Step 6 - Editing index.js - Input Kintone data into the chart
+### Step 6 - Editing index.js - Input Kintone data into the chart <!-- omit in toc -->
 
 File: [/src/index.js](./src/index.js)
 * We access the database records from Kintone's `event.records` object.
@@ -238,14 +214,14 @@ Notice anything interesting about the `color` property? We're using a slightly u
 
 ## Finish the Project
 
-### Step 7 - Compile and upload the code to Kintone
+### Step 7 - Compile and upload the code to Kintone <!-- omit in toc -->
 Run the following command to compile the code and upload it to Kintone.
 
 ```bash
 npm run build && npm run upload
 ```
 
-### Step 8 - Play with the Timeline chart on your Kintone App! 
+### Step 8 - Play with the Timeline chart on your Kintone App 🎉 <!-- omit in toc -->
 
 ---
 
@@ -254,7 +230,7 @@ npm run build && npm run upload
 
 Here is a rundown of common problems that may occur & their solutions!
 
-### Errors related to .env
+### Errors related to .env <!-- omit in toc -->
 
 If you get one of the following error messages, then please verify your `.env` file has been correctly configured, and you have not modified the `.env.example`.
 
@@ -264,7 +240,7 @@ If you get one of the following error messages, then please verify your `.env` f
 * `[webpack-cli] Error: Missing environment variable: KINTONE_PASSWORD`
 * `[webpack-cli] Error: Missing environment variable: VIEW_ID`
 
-### `npm install` command is not working
+### `npm install` command is not working <!-- omit in toc -->
 
 1. Verify the Node.js & npm versions **inside** the `timeline-generator-amcharts` folder
 2. Just installed Node.js? Verify you configured Node.js versions **inside** the `timeline-generator-amcharts` folder
@@ -272,7 +248,7 @@ If you get one of the following error messages, then please verify your `.env` f
 * Mac: `nodenv local 14.5.0`
 * Windows: `nvm use 14.5.0`
 
-### "npm run upload" failed?
+### "npm run upload" failed? <!-- omit in toc -->
 _@kintone/customize-uploader not working?_ Let's try the following:
 
 (1) Verify that customize uploader was installed globally
@@ -289,18 +265,18 @@ _@kintone/customize-uploader not working?_ Let's try the following:
 (3) Verify your [customize-manifest.json](customize-manifest.json) was updated with the correct App ID
 * ⚙️ Details: [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
 
-### Uncaught Error: Target container is not a DOM element
+### Uncaught Error: Target container is not a DOM element <!-- omit in toc -->
 Verify that the Custom View (Gallery View) has the following HTML Code:
 
 ```HTML
 <div id="root"></div>
 ```
 
-### Not seeing all the presidents?
+### Not seeing all the presidents? <!-- omit in toc -->
 Verify that the `# per page` setting is set to 100 in order for the amCharts Timeline to display all the presidents.
 * [![Kintone-View-Setting-Record-Count.png](docs/img/Kintone-View-Setting-Record-Count.png)](docs/img/Kintone-View-Setting-Record-Count-HD.png)
 
-### Not seeing a highlighted `TODO:`?
+### Not seeing a highlighted `TODO:`? <!-- omit in toc -->
 Click on the `Install` button on the VS Code pop-up message to install [TODO Highlight extension](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight).
 * [![vscode-setting-extension.png](docs/img/vscode-setting-extension.png)](docs/img/vscode-setting-extension-HD.png)  
 
@@ -310,24 +286,24 @@ Click on the `Install` button on the VS Code pop-up message to install [TODO Hig
 
 Here are some references that we used to create the Timeline Chart x Kintone customization.
 
-### Kintone Customize Uploader
+### Kintone Customize Uploader <!-- omit in toc -->
 What is `@kintone/customize-uploader`?
 * NPM: [npmjs.com/package/@kintone/customize-uploader](https://www.npmjs.com/package/@kintone/customize-uploader)
 * README: [js-sdk/packages/customize-uploader](https://github.com/kintone/js-sdk/tree/master/packages/customize-uploader#kintone-customize-uploader)
 * Tutorial: [Upload JavaScript and CSS files with Customize-uploader - Kintone Developer Program](https://kintone.dev/en/tutorials/tool-guides/upload-javascript-and-css-files-with-customize-uploader/)
 
-### Kintone Events
+### Kintone Events <!-- omit in toc -->
 * [Kintone Events - `app.record.index.show`](https://developer.kintone.io/hc/en-us/articles/212494758-Record-List-Event#events)
 * [Get Record List Header Element - `kintone.app.getHeaderSpaceElement`](https://developer.kintone.io/hc/en-us/articles/213148937-Get-Record-List#getHeaderSpaceElement)
 
-### amCharts Getting Started Tutorials
+### amCharts Getting Started Tutorials <!-- omit in toc -->
 * [amCharts `core.js` & `charts.js` CDN](https://www.amcharts.com/docs/v4/getting-started/basics/#CDN)
 * [Working with JavaScript x amCharts](https://www.amcharts.com/docs/v4/getting-started/basics/#Working_with_JavaScript)
 
-### amCharts Animation
+### amCharts Animation <!-- omit in toc -->
 * [Animation & `animated.js`](https://www.amcharts.com/docs/v4/concepts/animations/)
 
-### Timeline
+### Timeline <!-- omit in toc -->
 * [Timeline](https://www.amcharts.com/demos/timeline/)
 * [Anatomy of a TimeLine Chart](https://www.amcharts.com/docs/v4/chart-types/timeline/)
 * [Creating Timeline Charts](https://www.amcharts.com/docs/v4/tutorials/creating-timeline-charts/)
@@ -335,13 +311,13 @@ What is `@kintone/customize-uploader`?
 * [Setting position of the chart scrollbars](https://www.amcharts.com/docs/v4/tutorials/setting-position-of-the-chart-scrollbars/)
 * [Date Axis](https://www.amcharts.com/docs/v4/concepts/axes/date-axis/)
 
-### Plugin: Bullets
+### Plugin: Bullets <!-- omit in toc -->
 * [Plugin: Bullets](https://www.amcharts.com/docs/v4/tutorials/plugin-bullets/)
 
-### To have the PinBullets linkable to their Wiki_URL, take a look at the following docs
+### To have the PinBullets linkable to their Wiki_URL, take a look at the following docs <!-- omit in toc -->
 * [PinBullet - amCharts 4 Documentation](https://www.amcharts.com/docs/v4/reference/pinbullet/#label_property)
 * [Label - amCharts 4 Documentation](https://www.amcharts.com/docs/v4/reference/label/#url_property)
 
-### Other Parts
+### Other Parts <!-- omit in toc -->
 * [Array.prototype.map() - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 * [Imgur API](https://apidocs.imgur.com/)
