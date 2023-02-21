@@ -97,9 +97,8 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ### Step 1 - Create a Kintone App using `presidents.csv` file <!-- omit in toc -->
 
-|                                                      |                                                      |
-| ---------------------------------------------------- | ---------------------------------------------------- |
 | ![Create_CSV_App_01](docs/img/Create_CSV_App_01.png) | ![Create_CSV_App_02](docs/img/Create_CSV_App_02.png) |
+| ---------------------------------------------------- | ---------------------------------------------------- |
 | ![Create_CSV_App_03](docs/img/Create_CSV_App_03.png) | ![Create_CSV_App_04](docs/img/Create_CSV_App_04.png) |
 | ![Create_CSV_App_05](docs/img/Create_CSV_App_05.png) | ![Create_CSV_App_06](docs/img/Create_CSV_App_06.png) |
 | ![Create_CSV_App_07](docs/img/Create_CSV_App_07.png) | ![Create_CSV_App_08](docs/img/Create_CSV_App_08.png) |
