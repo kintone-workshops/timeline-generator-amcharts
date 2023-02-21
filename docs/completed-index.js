@@ -77,7 +77,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
           // TODO: Time period's end; Term's end
           'end': rec.end.value,
           // TODO: Icon inside the PinBullet; President's icon
-          'icon': `https://i.imgur.com/${rec.image.value}.png`,
+          'icon': rec.image.value,
           // Timeline category; only 1 is needed
           'category': '' // Timeline category; leave as empty string
         }
