@@ -243,6 +243,25 @@ If you get one of the following error messages, please verify that your `.env` f
 * `[webpack-cli] Error: Missing environment variable: KINTONE_PASSWORD`
 * `[webpack-cli] Error: Missing environment variable: VIEW_ID`
 
+### Errors related to kintone-customize-uploader <!-- omit in toc -->
+
+If you get the following error message, please verify that you have installed the `kintone-customize-uploader` package.
+
+Error Message:  
+
+```shell
+Options: {"command":"kintone-customize-uploader","commandArgs":["customize-manifest.json"],"options":{"expandEnvs":false,"noOverride":false,"silent":false,"useShell":false,"verbose":true}}
+Found .env file at default path: ./.env
+spawn kintone-customize-uploader ENOENT
+Parent process exited with signal: 1. Terminating child process...
+```
+
+Solution:  
+
+```shell
+npm install -g kintone-customize-uploader
+```
+
 ### `npm install` command is not working <!-- omit in toc -->
 
 1. Verify the Node.js & npm versions **inside** the `timeline-generator-amcharts` folder
