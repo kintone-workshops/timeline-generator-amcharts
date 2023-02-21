@@ -24,7 +24,7 @@ Our free, live workshop will walk you through creating a Web Database App, setti
 
 ## Completed Project
 
-Genji TODO: Add a screenshot of the completed project
+![Result.gif](docs/img/Result.gif)
 
 ## Get Started
 
@@ -97,18 +97,41 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ### Step 1 - Create a Kintone App using `presidents.csv` file <!-- omit in toc -->
 
-| ![Create_CSV_App_01](docs/img/Create_CSV_App_01.png) | ![Create_CSV_App_02](docs/img/Create_CSV_App_02.png) |
-| ---------------------------------------------------- | ---------------------------------------------------- |
-| ![Create_CSV_App_03](docs/img/Create_CSV_App_03.png) | ![Create_CSV_App_04](docs/img/Create_CSV_App_04.png) |
-| ![Create_CSV_App_05](docs/img/Create_CSV_App_05.png) | ![Create_CSV_App_06](docs/img/Create_CSV_App_06.png) |
-| ![Create_CSV_App_07](docs/img/Create_CSV_App_07.png) | ![Create_CSV_App_08](docs/img/Create_CSV_App_08.png) |
-| ![Create_CSV_App_09](docs/img/Create_CSV_App_09.png) | ![Create_CSV_App_10](docs/img/Create_CSV_App_10.png) |
-| ![Create_CSV_App_11](docs/img/Create_CSV_App_11.png) | ![Create_CSV_App_12](docs/img/Create_CSV_App_12.png) |
-| ![Create_CSV_App_13](docs/img/Create_CSV_App_13.png) |                                                      |
+| Step 01 ![Create_CSV_App_01](docs/img/Create_CSV_App_01.png) | Step 02 ![Create_CSV_App_02](docs/img/Create_CSV_App_02.png) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Step 03 ![Create_CSV_App_03](docs/img/Create_CSV_App_03.png) | Step 04 ![Create_CSV_App_04](docs/img/Create_CSV_App_04.png) |
+| Step 05 ![Create_CSV_App_05](docs/img/Create_CSV_App_05.png) | Step 06 ![Create_CSV_App_06](docs/img/Create_CSV_App_06.png) |
+| Step 07 ![Create_CSV_App_07](docs/img/Create_CSV_App_07.png) | Step 08 ![Create_CSV_App_08](docs/img/Create_CSV_App_08.png) |
+| Step 09 ![Create_CSV_App_09](docs/img/Create_CSV_App_09.png) | Step 10 ![Create_CSV_App_10](docs/img/Create_CSV_App_10.png) |
+| Step 11 ![Create_CSV_App_11](docs/img/Create_CSV_App_11.png) | Step 12 ![Create_CSV_App_12](docs/img/Create_CSV_App_12.png) |
+| Step 13 ![Create_CSV_App_13](docs/img/Create_CSV_App_13.png) | Step 14 ![Create_CSV_App_14](docs/img/Create_CSV_App_14.png) |
+| Step 15 ![Create_CSV_App_15](docs/img/Create_CSV_App_15.png) | Step 16 ![Create_CSV_App_16](docs/img/Create_CSV_App_16.png) |
+| Step 17 ![Create_CSV_App_17](docs/img/Create_CSV_App_17.png) |
 
-⚠️ Warning ⚠️
-* Field Code is case sensitive
-* Field Code and options must be as specified in the steps, or the code will not work
+#### Set Field Codes <!-- omit in toc -->
+How to set the Field Codes for the Kintone App?
+1. Hover over the field
+1. Click on the top right gear icon ⚙️
+1. Select `Settings` from the drop-down menu
+1. Click the edit button ![Edit Button](docs/img/edit_button.png)
+1. Enter the new field code
+1. Click the `Save` button
+
+⚠️ Field Codes are case-sensitive ⚠️
+
+![Field_Code_Settings](docs/img/Field_Code_Settings.gif)
+
+#### Set the following Field Codes <!-- omit in toc -->
+
+| Field Name | Field Code |
+| ---------- | ---------- |
+| Start_Date | `start`    |
+| End_Date   | `end`      |
+| First_name | `first`    |
+| Last_Name  | `last`     |
+| Party      | `party`    |
+| Wiki_URL   | `wiki`     |
+| Image_URL  | `image`    |
 
 ### Step 2 - Create a Custom View <!-- omit in toc -->
 * From App Settings, click on the **Views** tab
@@ -124,6 +147,12 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 * Save!
 
 Be sure to click the **Save** and **Activate App** buttons! 💪
+
+| Step 23 ![Create_CSV_App_23](docs/img/Create_CSV_App_23.png) | Step 24 ![Create_CSV_App_24](docs/img/Create_CSV_App_24.png) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Step 25 ![Create_CSV_App_25](docs/img/Create_CSV_App_25.png) | Step 26 ![Create_CSV_App_26](docs/img/Create_CSV_App_26.png) |
+| Step 27 ![Create_CSV_App_27](docs/img/Create_CSV_App_27.png) | Step 28 ![Create_CSV_App_28](docs/img/Create_CSV_App_28.png) |
+| Step 29 ![Create_CSV_App_29](docs/img/Create_CSV_App_29.png) | Step 30 ![Create_CSV_App_30](docs/img/Create_CSV_App_30.png) |
 
 ---
 
@@ -223,6 +252,10 @@ Run the following command to compile the code and upload it to Kintone.
 ```bash
 npm run build && npm run upload
 ```
+
+| Before Code Upload                             | After Code Upload                            |
+| ---------------------------------------------- | -------------------------------------------- |
+| ![Step7_Before.png](docs/img/Step7_Before.png) | ![Step7_After.png](docs/img/Step7_After.png) |
 
 ### Step 8 - Play with the Timeline chart on your Kintone App 🎉 <!-- omit in toc -->
 
