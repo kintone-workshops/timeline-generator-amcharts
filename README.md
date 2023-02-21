@@ -9,40 +9,39 @@ Thank you for attending our **Kintone x Timeline** workshop!
 Our free, live workshop will walk you through creating a Web Database App, setting up a React project, and using amCharts to generate a dynamic Timeline chart!
 
 ## Outline <!-- omit in toc -->
-- [Build a Timeline Generator using amCharts and Kintone](#build-a-timeline-generator-using-amcharts-and-kintone)
-  - [Completed Project](#completed-project)
-  - [Get Started](#get-started)
-  - [Get Your Free Kintone Database](#get-your-free-kintone-database)
-  - [Workshop Slides](#workshop-slides)
-  - [Workshop Steps](#workshop-steps)
-  - [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
-    - [Step 1 - Create a Kintone App using `presidents.csv` file](#step-1---create-a-kintone-app-using-presidentscsv-file)
-    - [Step 2 - Create a Custom View](#step-2---create-a-custom-view)
-  - [Connecting the Project to Kintone](#connecting-the-project-to-kintone)
-    - [Step 3 - Grab the Login Credentials, View ID, and App ID](#step-3---grab-the-login-credentials-view-id-and-app-id)
-    - [Step 4 - Create a `.env` File](#step-4---create-a-env-file)
-    - [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
-  - [Coding Time](#coding-time)
-  - [Step 6 - Editing index.js - Input Kintone data into the chart](#step-6---editing-indexjs---input-kintone-data-into-the-chart)
-  - [Finish the Project](#finish-the-project)
-    - [Step 7 - Compile and upload the code to Kintone](#step-7---compile-and-upload-the-code-to-kintone)
-    - [Step 8 - Play with the Timeline chart on your Kintone App!](#step-8---play-with-the-timeline-chart-on-your-kintone-app)
-  - [Debugging](#debugging)
-    - [Errors related to .env](#errors-related-to-env)
-    - [`npm install` command is not working](#npm-install-command-is-not-working)
-    - ["npm run upload" failed?](#npm-run-upload-failed)
-    - [Uncaught Error: Target container is not a DOM element](#uncaught-error-target-container-is-not-a-dom-element)
-    - [Not seeing all the presidents?](#not-seeing-all-the-presidents)
-    - [Not seeing a highlighted `TODO:`?](#not-seeing-a-highlighted-todo)
-  - [amCharts + Kintone References](#amcharts--kintone-references)
-    - [Kintone Customize Uploader](#kintone-customize-uploader)
-    - [Kintone Events](#kintone-events)
-    - [amCharts Getting Started Tutorials](#amcharts-getting-started-tutorials)
-    - [amCharts Animation](#amcharts-animation)
-    - [Timeline](#timeline)
-    - [Plugin: Bullets](#plugin-bullets)
-    - [To have the PinBullets linkable to their Wiki\_URL, take a look at the following docs](#to-have-the-pinbullets-linkable-to-their-wiki_url-take-a-look-at-the-following-docs)
-    - [Other Parts](#other-parts)
+* [Completed Project](#completed-project)
+* [Get Started](#get-started)
+* [Get Your Free Kintone Database](#get-your-free-kintone-database)
+* [Workshop Slides](#workshop-slides)
+* [Workshop Steps](#workshop-steps)
+* [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
+  * [Step 1 - Create a Kintone App using `presidents.csv` file](#step-1---create-a-kintone-app-using-presidentscsv-file)
+  * [Step 2 - Create a Custom View](#step-2---create-a-custom-view)
+* [Connecting the Project to Kintone](#connecting-the-project-to-kintone)
+  * [Step 3 - Grab the Login Credentials, View ID, and App ID](#step-3---grab-the-login-credentials-view-id-and-app-id)
+  * [Step 4 - Create a `.env` File](#step-4---create-a-env-file)
+  * [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
+* [Coding Time](#coding-time)
+* [Step 6 - Editing index.js - Input Kintone data into the chart](#step-6---editing-indexjs---input-kintone-data-into-the-chart)
+* [Finish the Project](#finish-the-project)
+  * [Step 7 - Compile and upload the code to Kintone](#step-7---compile-and-upload-the-code-to-kintone)
+  * [Step 8 - Play with the Timeline chart on your Kintone App!](#step-8---play-with-the-timeline-chart-on-your-kintone-app)
+* [Debugging](#debugging)
+  * [Errors related to .env](#errors-related-to-env)
+  * [`npm install` command is not working](#npm-install-command-is-not-working)
+  * ["npm run upload" failed?](#npm-run-upload-failed)
+  * [Uncaught Error: Target container is not a DOM element](#uncaught-error-target-container-is-not-a-dom-element)
+  * [Not seeing all the presidents?](#not-seeing-all-the-presidents)
+  * [Not seeing a highlighted `TODO:`?](#not-seeing-a-highlighted-todo)
+* [amCharts + Kintone References](#amcharts--kintone-references)
+  * [Kintone Customize Uploader](#kintone-customize-uploader)
+  * [Kintone Events](#kintone-events)
+  * [amCharts Getting Started Tutorials](#amcharts-getting-started-tutorials)
+  * [amCharts Animation](#amcharts-animation)
+  * [Timeline](#timeline)
+  * [Plugin: Bullets](#plugin-bullets)
+  * [To have the PinBullets linkable to their Wiki\_URL, take a look at the following docs](#to-have-the-pinbullets-linkable-to-their-wiki_url-take-a-look-at-the-following-docs)
+  * [Other Parts](#other-parts)
 
 
 ## Completed Project
@@ -122,17 +121,15 @@ Genji TODO: Update
 
 ### Step 1 - Create a Kintone App using `presidents.csv` file
 
-| Steps                                                                                  | Screenshot                                                                                                                         |
-| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| From the Kintone portal, click the [+] button to create an App                         | ![Click on the + button on the right of the Apps section from the Kintone Portal](./docs/img/build-database-01.png)                |
-| Select **Create App from Scratch** option                                              | ![Kintone Marketplace page > Create New App section > select the Create App from Scratch button](./docs/img/build-database-02.png) |
-| Name the App (Ex: _Kintone Cards_)                                                     | ![Set the App's name to Kintone Cards](./docs/img/build-database-03.png)                                                           |
-| Add **Text** and **Radio Button** fields                                               | ![Drag the text and radio button fields to the center](./docs/img/build-database-04.png)                                           |
-| Open the **Text** field settings                                                       | ![Hover over the text field gear > select the Settings option](./docs/img/build-database-05.png)                                   |
-| Set the **Name** (`Title`) and **Field Code** (`title`)                                | ![Set the Name to Title and Field Code to title](./docs/img/build-database-06.png)                                                 |
-| Open the **Radio Button** field settings                                               | ![Hover over the Radio Button field gear > select the Settings option](./docs/img/build-database-07.png)                           |
-| Set the **Name** (`Color`), **Options** (`Red` & `Blue`), and **Field Code** (`color`) | ![Set the Name to COlor, options to Red and Blue, and Field Code to color](./docs/img/build-database-08.png)                       |
-| Last, remember to save your changes!                                                   | ![Click on the blue Activate App button](./docs/img/build-database-09.png)                                                         |
+|                                                      |                                                      |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| ![Create_CSV_App_01](docs/img/Create_CSV_App_01.png) | ![Create_CSV_App_02](docs/img/Create_CSV_App_02.png) |
+| ![Create_CSV_App_03](docs/img/Create_CSV_App_03.png) | ![Create_CSV_App_04](docs/img/Create_CSV_App_04.png) |
+| ![Create_CSV_App_05](docs/img/Create_CSV_App_05.png) | ![Create_CSV_App_06](docs/img/Create_CSV_App_06.png) |
+| ![Create_CSV_App_07](docs/img/Create_CSV_App_07.png) | ![Create_CSV_App_08](docs/img/Create_CSV_App_08.png) |
+| ![Create_CSV_App_09](docs/img/Create_CSV_App_09.png) | ![Create_CSV_App_10](docs/img/Create_CSV_App_10.png) |
+| ![Create_CSV_App_11](docs/img/Create_CSV_App_11.png) | ![Create_CSV_App_12](docs/img/Create_CSV_App_12.png) |
+| ![Create_CSV_App_13](docs/img/Create_CSV_App_13.png) |                                                      |
 
 ⚠️ Warning ⚠️
 * Field Code is case sensitive
