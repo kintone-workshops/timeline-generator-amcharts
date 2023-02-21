@@ -142,7 +142,12 @@ Genji TODO: Update
 * Click on the Plus Button ⊕ to create a View
 * Select `Custom view` under **Visible Fields and Column Order** section
 * Get the `View ID`! (Required in `.env` file)
-* Under **HTML Code**, input `<div id="root"></div>`
+* Under **HTML Code**, input:
+
+   ```HTML
+   <div id="root"></div>
+   ```
+
 * Save!
 
 Be sure to click the **Save** and **Activate App** buttons! 💪
@@ -152,13 +157,16 @@ Be sure to click the **Save** and **Activate App** buttons! 💪
 ## Connecting the Project to Kintone
 ### Step 3 - Grab the Login Credentials, View ID, and App ID
 
-TODO: Update section
+Where to get get View ID and App ID?
+* Go to your Kintone App's custom view & grab the URL
+* Kintone App's URL follows this template:
+  * `https://<SUBDOMAIN>.kintone.com/k/<App ID>/?view=<View ID>`
 
-**What is my App ID?** 🤔  
-* Go to your Kintone App & grab the URL
-* Kintone App's URL follows this template: `https://<SUBDOMAIN>.kintone.com/k/<App ID>/show#record=<RECORD ID>`
-* Grab the number between the `/k/`
-* Example: `https://example.kintone.com/k/1/` -> The App's ID is `1`
+Example:
+* `https://example.kintone.com/k/1/?view=1234`
+* Subdomain = `example`
+* App ID = `1`
+* View ID = `1234`
 
 ### Step 4 - Create a `.env` File
 
