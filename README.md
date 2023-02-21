@@ -130,7 +130,7 @@ Be sure to click the **Save** and **Activate App** buttons! 💪
 ## Connecting the Project to Kintone
 ### Step 3 - Grab the Login Credentials, View ID, and App ID <!-- omit in toc -->
 
-Where to get get View ID and App ID?
+Where to get the Subdomain, View ID, and App ID?
 * Go to your Kintone App's custom view & grab the URL
 * Kintone App's URL follows this template:
   * `https://<SUBDOMAIN>.kintone.com/k/<App ID>/?view=<View ID>`
@@ -138,12 +138,14 @@ Where to get get View ID and App ID?
 Example:
 * `https://example.kintone.com/k/1/?view=1234`
 * Subdomain = `example`
+* KINTONE_BASE_URL = `https://example.kintone.com`
 * App ID = `1`
 * View ID = `1234`
 
 ### Step 4 - Create a `.env` File <!-- omit in toc -->
 
-Using the [.env.example](.env.example) file as a template, create a `.env` file that will contain your login credentials and the Kintone App's View ID.
+Using the [.env.example](.env.example) file as a template, create a `.env` file.  
+This file will contain your login credentials and the Kintone App's View ID.
 
 Here is what your `.env` might look like:
 
@@ -178,7 +180,7 @@ If this is NOT your first Kintone App, update the `app` value to your App ID.
 File: [/src/index.js](./src/index.js)
 * We access the database records from Kintone's `event.records` object.
 * We will map the `event.records` object into an object for amCharts to parse.
-* Below, we have a basic mapping function, with Kintone's records designated as the `rec` object.
+* Below is a basic mapping function, with Kintone's records designated as the `rec` object.
 * Kintone's records follow a structure of `objectName`.`fieldCode`.`value`
 * Example: To access the `First Name` value of a Kintone record, we will write it as:
   * `rec.first.value` => George (Washington)
@@ -207,7 +209,7 @@ File: [/src/index.js](./src/index.js)
 
 Notice anything interesting about the `color` property? 👋  
 We're using a slightly unusual method of object notation here.  
-The reason is, the `partyColor` object we defined on [line 29](src/index.js#L29) depends on the variable coming from our Kintone records. Because the color is a variable, standard JavaScript object notation such as `partyColor.rec.party.value` would not evaluate correctly. We use bracket notation here in order to have the `partyColor` property depend on the `rec.party.color` value from our app. In short, if you want to use a variable to access an object property, use square brackets!
+The reason is that the `partyColor` object we defined on [line 29](src/index.js#L29) depends on the variable from our Kintone records. Because the color is a variable, standard JavaScript object notation such as `partyColor.rec.party.value` would not evaluate correctly. We use bracket notation here to have the `partyColor` property depend on our app's `rec.party.color` value. In short, if you want to use a variable to access an object property, use square brackets!
 
 </details>
 
@@ -233,7 +235,7 @@ Here is a rundown of common problems that may occur & their solutions!
 
 ### Errors related to .env <!-- omit in toc -->
 
-If you get one of the following error messages, then please verify your `.env` file has been correctly configured, and you have not modified the `.env.example`.
+If you get one of the following error messages, please verify that your `.env` file has been correctly configured and that you have not modified the `.env.example`.
 
 * `Failed to find .env file at default paths: [./.env,./.env.js,./.env.json]`
 * `[webpack-cli] Error: Missing environment variable: KINTONE_BASE_URL`
@@ -274,7 +276,7 @@ Verify that the Custom View (Gallery View) has the following HTML Code:
 ```
 
 ### Not seeing all the presidents? <!-- omit in toc -->
-Verify that the `# per page` setting is set to 100 in order for the amCharts Timeline to display all the presidents.
+Verify that the `# per page` setting is set to 100 for the amCharts Timeline to display all the presidents.
 * [![Kintone-View-Setting-Record-Count.png](docs/img/Kintone-View-Setting-Record-Count.png)](docs/img/Kintone-View-Setting-Record-Count-HD.png)
 
 ### Not seeing a highlighted `TODO:`? <!-- omit in toc -->
@@ -285,7 +287,7 @@ Click on the `Install` button on the VS Code pop-up message to install [TODO Hig
 
 ## amCharts + Kintone References
 
-Here are some references that we used to create the Timeline Chart x Kintone customization.
+Here are some references we used to create the Timeline Chart x Kintone customization.
 
 ### Kintone Customize Uploader <!-- omit in toc -->
 What is `@kintone/customize-uploader`?
