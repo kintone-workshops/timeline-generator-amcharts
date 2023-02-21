@@ -19,6 +19,8 @@ Our free, live workshop will walk you through creating a Web Database App, setti
   * [Files to Edit](#files-to-edit)
   * [`...` File](#-file)
   * [Solutions to the Tasks](#solutions-to-the-tasks)
+* [Debugging](#debugging)
+  * [Not seeing all the presidents?](#not-seeing-all-the-presidents)
 * [amCharts + Kintone References](#amcharts--kintone-references)
   * [Kintone Events](#kintone-events)
   * [amCharts Getting Started Tutorials](#amcharts-getting-started-tutorials)
@@ -152,6 +154,12 @@ VIEW_ID="1234"
   ```
 
 </details>
+
+## Debugging
+
+### Not seeing all the presidents?
+Verify that the `# per page` setting is set to 100 in order for the amCharts Timeline to display all the presidents.
+* ![Kintone-View-Setting-Record-Count.png](docs/img/Kintone-View-Setting-Record-Count.png)  
 
 ---
 
