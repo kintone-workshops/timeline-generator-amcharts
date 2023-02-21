@@ -65,21 +65,21 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
       chart.fontSize = 12;
       chart.tooltipContainer.fontSize = 12;
 
-      // Input Kintone data into the chart
+      // TODO: Input Kintone data into the chart
       chart.data = event.records.map((rec, index) => {
         return {
-          // Text above the PinBullet; President's name
+          // TODO: Text above the PinBullet; President's name
           'text': `${rec.first.value}\n${rec.last.value}`,
-          // PinBullet's & time period's color; Party color
+          // TODO: PinBullet's & time period's color; Party color
           'color': partyColor[rec.party.value],
-          // Time period's start; Term's start
+          // TODO: Time period's start; Term's start
           'start': rec.start.value,
-          // Time period's end; Term's end
+          // TODO: Time period's end; Term's end
           'end': rec.end.value,
-          // Icon inside the PinBullet; President's icon
-          'icon': rec.img.value,
+          // TODO: Icon inside the PinBullet; President's icon
+          'icon': `https://i.imgur.com/${rec.image.value}.png`,
           // Timeline category; only 1 is needed
-          'category': ''
+          'category': '' // Timeline category; leave as empty string
         }
       });
       console.log('chart.data');
