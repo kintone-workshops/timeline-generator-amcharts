@@ -145,12 +145,28 @@ VIEW_ID="1234"
 ### Solutions to the Tasks
 
 <details>
-  <summary>Task # - ...</summary>
+  <summary>Input Kintone data into the chart</summary>
 
   File: [...](...)
 
   ```javascript
-  ...
+  // TODO: Input Kintone data into the chart
+  chart.data = event.records.map((rec, index) => {
+    return {
+      // TODO: Text above the PinBullet; President's name
+      'text': null,
+      // TODO: PinBullet's & time period's color; Party color
+      'color': null,
+      // TODO: Time period's start; Term's start
+      'start': null,
+      // TODO: Time period's end; Term's end
+      'end': null,
+      // TODO: Icon inside the PinBullet; President's icon
+      'icon': null,
+      // TODO: Timeline category; only 1 is needed
+      'category': ''
+    }
+  });
   ```
 
 </details>
