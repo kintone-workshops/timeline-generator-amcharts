@@ -65,6 +65,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
       chart.fontSize = 12;
       chart.tooltipContainer.fontSize = 12;
 
+      // TODO
       // Input Kintone data into the chart
       chart.data = event.records.map((rec, index) => {
         return {
