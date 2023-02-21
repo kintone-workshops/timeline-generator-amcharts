@@ -220,17 +220,16 @@ Genji TODO: Update with solution
   chart.data = event.records.map((rec, index) => {
     return {
       // TODO: Text above the PinBullet; President's name
-      'text': null,
+      'text': rec.first.value,
       // TODO: PinBullet's & time period's color; Party color
-      'color': null,
+      'color': partyColor[rec.party.value],
       // TODO: Time period's start; Term's start
-      'start': null,
+      'start': rec.start.value,
       // TODO: Time period's end; Term's end
-      'end': null,
+      'end': rec.end.value,
       // TODO: Icon inside the PinBullet; President's icon
-      'icon': null,
-      // TODO: Timeline category; only 1 is needed
-      'category': ''
+      'icon': rec.image.value,
+      'category': '' // Timeline category; leave as empty string
     }
   });
   ```
@@ -245,12 +244,10 @@ Genji TODO: Update with solution
 Run the following command to compile the code and upload it to Kintone.
 
 ```bash
-npm run build
-
-npm run upload
+npm run build && npm run upload
 ```
 
-### Step 8 - Play with the Timeline chart on your Kintone App!
+### Step 8 - Play with the Timeline chart on your Kintone App! 
 
 ---
 
@@ -289,10 +286,10 @@ _@kintone/customize-uploader not working?_ Let's try the following:
   * ✅ Correct Format: `https://example.kintone.com`
   * ❌ Incorrect Format: `https://example.kintone.com/` or `example.kintone.com`
 * ⚠️ Re-run the npm commands after saving the .env file
-* ⚙️ Details: [Create a `.env` file](#create-a-env-file)
+* ⚙️ Details: [Step 4 - Create a `.env` File](#step-4---create-a-env-file)
 
-(3) Verify your customize-manifest.json was updated with the correct App ID
-* ⚙️ Details: [Input the App ID](#input-the-app-id)
+(3) Verify your [customize-manifest.json](customize-manifest.json) was updated with the correct App ID
+* ⚙️ Details: [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
 
 ### Uncaught Error: Target container is not a DOM element
 Verify that the Custom View (Gallery View) has the following HTML Code:
