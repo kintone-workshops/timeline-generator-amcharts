@@ -46,7 +46,7 @@ Our free, live workshop will walk you through creating a Web Database App, setti
 
 ## Completed Project
 
-Genji TODO:  Add a screenshot of the completed project
+Genji TODO: Add a screenshot of the completed project
 
 ## Get Started
 
@@ -212,8 +212,6 @@ File: [/src/index.js](./src/index.js)
 
 <details>
   <summary>Solution to Step 6 ↯</summary>
-
-Genji TODO: Update with solution
 
   ```javascript
   // TODO: Input Kintone data into the chart
