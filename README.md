@@ -205,7 +205,9 @@ File: [/src/index.js](./src/index.js)
   });
   ```
 
-Notice anything interesting about the `color` property? We're using a slightly unusual method of object notation here. The reason is, the `partyColor` object we defined on line 29 depends on the variable coming from our Kintone records. Because the color is a variable, standard Javascript object notation such as `partyColor.rec.party.value` would not evaluate correctly. We use bracket notation here in order to have the `partyColor` property depend on the `rec.party.color` value from our app. In short, if you want to use a variable to access an object property, use square brackets!
+Notice anything interesting about the `color` property? 👋  
+We're using a slightly unusual method of object notation here.  
+The reason is, the `partyColor` object we defined on [line 29](src/index.js#L29) depends on the variable coming from our Kintone records. Because the color is a variable, standard JavaScript object notation such as `partyColor.rec.party.value` would not evaluate correctly. We use bracket notation here in order to have the `partyColor` property depend on the `rec.party.color` value from our app. In short, if you want to use a variable to access an object property, use square brackets!
 
 </details>
 
