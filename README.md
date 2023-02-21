@@ -9,26 +9,26 @@ Thank you for attending our **Kintone x Timeline** workshop!
 Our free, live workshop will walk you through creating a Web Database App, setting up a React project, and using amCharts to generate a dynamic Timeline chart!
 
 ## Outline <!-- omit in toc -->
-* [Completed Project](#completed-project)
-* [Get Started](#get-started)
-* [Get Your Free Kintone Database](#get-your-free-kintone-database)
-* [Workshop Slides](#workshop-slides)
-* [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
-* [Create a `.env` File](#create-a-env-file)
-* [Workshop Steps](#workshop-steps)
-  * [Files to Edit](#files-to-edit)
-  * [`...` File](#-file)
-  * [Solutions to the Tasks](#solutions-to-the-tasks)
-* [Debugging](#debugging)
-  * [Not seeing all the presidents?](#not-seeing-all-the-presidents)
-* [amCharts + Kintone References](#amcharts--kintone-references)
-  * [Kintone Events](#kintone-events)
-  * [amCharts Getting Started Tutorials](#amcharts-getting-started-tutorials)
-  * [amCharts Animation](#amcharts-animation)
-  * [Timeline](#timeline)
-  * [Plugin: Bullets](#plugin-bullets)
-  * [To have the PinBullets linkable to their Wiki\_URL, take a look at the following docs](#to-have-the-pinbullets-linkable-to-their-wiki_url-take-a-look-at-the-following-docs)
-  * [Other Parts](#other-parts)
+- [Build a Timeline Generator using amCharts and Kintone](#build-a-timeline-generator-using-amcharts-and-kintone)
+  - [Completed Project](#completed-project)
+  - [Get Started](#get-started)
+  - [Get Your Free Kintone Database](#get-your-free-kintone-database)
+  - [Workshop Slides](#workshop-slides)
+  - [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
+  - [Create a `.env` File](#create-a-env-file)
+  - [Workshop Steps](#workshop-steps)
+    - [Files to Edit](#files-to-edit)
+    - [Solutions to Task 3](#solutions-to-task-3)
+  - [Debugging](#debugging)
+    - [Not seeing all the presidents?](#not-seeing-all-the-presidents)
+  - [amCharts + Kintone References](#amcharts--kintone-references)
+    - [Kintone Events](#kintone-events)
+    - [amCharts Getting Started Tutorials](#amcharts-getting-started-tutorials)
+    - [amCharts Animation](#amcharts-animation)
+    - [Timeline](#timeline)
+    - [Plugin: Bullets](#plugin-bullets)
+    - [To have the PinBullets linkable to their Wiki\_URL, take a look at the following docs](#to-have-the-pinbullets-linkable-to-their-wiki_url-take-a-look-at-the-following-docs)
+    - [Other Parts](#other-parts)
 
 ## Completed Project
 
@@ -136,18 +136,15 @@ VIEW_ID="1234"
 
 ### Files to Edit
 1. Credentials - Create `.env` file by duplicating the [.env.example](.env.example) file
-1. Frontend that builds the cards - [...](...)
-1. Backend that connects with Kintone - [...](...)
+2. Edit line two in the [customize-manifest.json](customize-manifest.json) file with your App ID.
+3. Edit [/src/index.js](./src/index.js) to map the data from Kintone to the chart.
 
-### `...` File
-* [ ] Task # - ...
-
-### Solutions to the Tasks
+### Solutions to Task 3
 
 <details>
   <summary>Input Kintone data into the chart</summary>
 
-  File: [...](...)
+  File: [/src/index.js](./src/index.js)
 
   ```javascript
   // TODO: Input Kintone data into the chart
@@ -168,6 +165,10 @@ VIEW_ID="1234"
     }
   });
   ```
+  Via the `event.records` object from Kintone, we have access to our database records, which we will map into a object for amCharts to parse. Above, we have a basic mapping function, with Kintone's records designated as the `rec` object.
+  Kintone's records follow a structure of `objectName`.`fieldCode`.`value`, so in this case, to access the `First Name` value of a Kintone record, we should write it as:
+
+  `rec.first.value` => George (Washington).
 
 </details>
 
