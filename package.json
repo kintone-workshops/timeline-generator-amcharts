@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node scripts/npm-start.js",
     "upload": "env-cmd --verbose kintone-customize-uploader --watch customize-manifest.json",
     "dev": "npm run build -- --watch",
     "build": "webpack"
