@@ -78,8 +78,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
           'end': null,
           // TODO: Icon inside the PinBullet; President's icon
           'icon': null,
-          // TODO: Timeline category; only 1 is needed
-          'category': ''
+          'category': '' // Timeline category; leave as empty string
         }
       });
       console.log('chart.data');
