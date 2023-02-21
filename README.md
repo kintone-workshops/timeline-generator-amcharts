@@ -121,9 +121,10 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 1. Then input your Kintone credentials like the following:
 
 ```txt
-VITE_SUBDOMAIN = "example"
-VITE_APPID = "1"
-VITE_APITOKEN = "abcdefghijklmnopqrstuvwxyz"
+KINTONE_BASE_URL="https://example.kintone.com"
+KINTONE_USERNAME="your_username"
+KINTONE_PASSWORD="your_password"
+VIEW_ID="1234"
 ```
 
 ### ⚠️ DO NOT DELETE THE [.env.example](.env.example) FILE!  <!-- omit in toc -->
