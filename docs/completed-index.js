@@ -69,15 +69,15 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
       chart.data = event.records.map((rec, index) => {
         return {
           // Text above the PinBullet; President's name
-          'text': null,
+          'text': `${rec.first.value}\n${rec.last.value}`,
           // PinBullet's & time period's color; Party color
-          'color': null,
+          'color': partyColor[rec.party.value],
           // Time period's start; Term's start
-          'start': null,
+          'start': rec.start.value,
           // Time period's end; Term's end
-          'end': null,
+          'end': rec.end.value,
           // Icon inside the PinBullet; President's icon
-          'icon': null,
+          'icon': rec.img.value,
           // Timeline category; only 1 is needed
           'category': ''
         }
