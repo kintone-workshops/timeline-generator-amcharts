@@ -12,7 +12,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
   // Set Custom View's ID in .env
   const customViewID = Number(process.env.VIEW_ID);
   // Increment to confirm script version on Kintone
-  const scriptVer = '0';
+  const scriptVer = 'Completed';
   console.log(`\nScript version: ${scriptVer}\n\n`);
 
   kintone.events.on('app.record.index.show', function (event) {
@@ -78,7 +78,6 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
           'end': rec.end.value,
           // TODO: Icon inside the PinBullet; President's icon
           'icon': rec.image.value,
-          // Timeline category; only 1 is needed
           'category': '' // Timeline category; leave as empty string
         }
       });
