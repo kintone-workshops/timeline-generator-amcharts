@@ -27,6 +27,8 @@
 * [🚀 Have your Kintone Subdomain ready!](#-have-your-kintone-subdomain-ready)
 * [Got Questions? 🤔](#got-questions-)
 * [Why use Kintone?](#why-use-kintone)
+* [Step 6 - Editing index.js - Input Kintone data into the chart](#step-6---editing-indexjs---input-kintone-data-into-the-chart)
+* [Compile and upload the code to Kintone](#compile-and-upload-the-code-to-kintone)
 
 ---
 
@@ -337,5 +339,32 @@ Feel free to msg me with a workshop-related or a general Kintone question to me 
 More information:
 + Get Hacking with Kintone - https://kintone.dev/en/landing-page/hackathon/
 + Job Listing - Kintone Developer Forum - https://forum.kintone.dev/t/seeking-independent-contractors-with-kintone-customization-programming-skills/550
+
+=   =   =   =   =   =   =   =   =   =
+
+## Step 6 - Editing index.js - Input Kintone data into the chart
+
+// TODO: Input Kintone data into the chart
+chart.data = event.records.map((rec, index) => {
+  return {
+    // TODO: Text above the PinBullet; President's name
+    'text': rec.first.value,
+    // TODO: PinBullet's & time period's color; Party color
+    'color': partyColor[rec.party.value],
+    // TODO: Time period's start; Term's start
+    'start': rec.start.value,
+    // TODO: Time period's end; Term's end
+    'end': rec.end.value,
+    // TODO: Icon inside the PinBullet; President's icon
+    'icon': rec.image.value,
+    'category': '' // Timeline category; leave as empty string
+  }
+});
+
+=   =   =   =   =   =   =   =   =   =
+
+## Compile and upload the code to Kintone
+
+npm run build && npm run upload
 
 =   =   =   =   =   =   =   =   =   =
