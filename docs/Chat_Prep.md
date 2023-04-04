@@ -145,7 +145,7 @@ KINTONE_PASSWORD="your_password"
 VIEW_ID="1234"
 
 ⚠️ DO NOT DELETE THE .env.example FILE!
-.env.example is used by env-cmd to verify that .env file is correctly configured.
+.env.example is used by env-cmd to verify that the .env file is correctly configured.
 
 =   =   =   =   =   =   =   =   =   =
 
@@ -175,7 +175,7 @@ https://github.com/kintone-workshops/timeline-generator-amcharts#create-a-kinton
 
 How to set the Field Codes for the Kintone App?
 1. Hover over the field
-2. Click on the top right gear icon ⚙️
+2. Click the top right gear icon ⚙️
 3. Select Settings from the drop-down menu
 4. Click the edit button Edit Button
 5. Enter the new field code

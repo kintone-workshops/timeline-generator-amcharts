@@ -112,7 +112,7 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 #### Set Field Codes <!-- omit in toc -->
 How to set the Field Codes for the Kintone App?
 1. Hover over the field
-1. Click on the top right gear icon ⚙️
+1. Click the top right gear icon ⚙️
 1. Select `Settings` from the drop-down menu
 1. Click the edit button ![Edit Button](docs/img/edit_button.png)
 1. Enter the new field code
@@ -135,10 +135,10 @@ How to set the Field Codes for the Kintone App?
 | Image_URL  | `image`    |
 
 ### Step 2 - Setup a Custom View <!-- omit in toc -->
-* From App Settings, click on the **Views** tab
-* Click on the Plus Button ⊕ to create a View
+* From App Settings, Click the **Views** tab
+* Click the Plus Button ⊕ to create a View
 * Select `Custom view` under **Visible Fields and Column Order** section
-* Get the `View ID`! (Required in `.env` file)
+* Get the `View ID`! (Required in the `.env` file)
 * Under **HTML Code**, input:
 
    ```HTML
@@ -187,7 +187,7 @@ VIEW_ID="1234"
 ```
 
 #### ⚠️ DO NOT DELETE THE [.env.example](.env.example) FILE!  <!-- omit in toc --> <!-- omit in toc -->
-[.env.example](.env.example) is used by env-cmd to verify that `.env` file is correctly configured.
+[.env.example](.env.example) is used by env-cmd to verify that the `.env` file is correctly configured.
 
 ### Step 5 - Update customize-manifest.json with the App ID <!-- omit in toc -->
 The Kintone Customize Uploader uses [customize-manifest.json](customize-manifest.json) to determine where to upload the JavaScript file (_which Kintone App_).
@@ -313,7 +313,7 @@ _@kintone/customize-uploader not working?_ Let's try the following:
 * `npm install -g @kintone/customize-uploader`
 
 (2) Verify that the .env login info is correct (including the password)
-* ⚠️ Make sure your login info is inside `.env` file & **NOT** `.env.example` file!
+* ⚠️ Make sure your login info is inside the `.env` file & **NOT** the `.env.example` file!
 * ⚠️ Verify that KINTONE_BASE_URL input is correctly formatted:
   * ✅ Correct Format: `https://example.kintone.com`
   * ❌ Incorrect Format: `https://example.kintone.com/` or `example.kintone.com`
@@ -323,7 +323,7 @@ _@kintone/customize-uploader not working?_ Let's try the following:
 (3) Verify your [customize-manifest.json](customize-manifest.json) was updated with the correct App ID
 * ⚙️ Details: [Step 5 - Update customize-manifest.json with the App ID](#step-5---update-customize-manifestjson-with-the-app-id-)
 
-(4) Verify that the `npm run build` command was run before `npm run upload`
+(4) Verify that the `npm run build` command was run before the `npm run upload`
 
 ### Uncaught Error: Target container is not a DOM element <!-- omit in toc -->
 Verify that the Custom View (Gallery View) has the following HTML Code:
@@ -337,7 +337,7 @@ Verify that the `# per page` setting is set to 100 for the amCharts Timeline to 
 * [![Kintone-View-Setting-Record-Count.png](docs/img/Kintone-View-Setting-Record-Count.png)](docs/img/Kintone-View-Setting-Record-Count-HD.png)
 
 ### Not seeing a highlighted `TODO:`? <!-- omit in toc -->
-Click on the `Install` button on the VS Code pop-up message to install [TODO Highlight extension](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight).
+Click the `Install` button on the VS Code pop-up message to install [TODO Highlight extension](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight).
 * [![vscode-setting-extension.png](docs/img/vscode-setting-extension.png)](docs/img/vscode-setting-extension-HD.png)  
 
 ---
