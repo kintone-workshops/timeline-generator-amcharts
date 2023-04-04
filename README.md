@@ -83,14 +83,14 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ## Workshop Steps
 
-1. Create the Kintone App using the `presidents.csv` file
-2. Setup a Custom View
-3. Grab the Login Credentials, View ID, and App ID
-4. Create `.env` file by duplicating the [.env.example](.env.example) file
-5. Update line two in the [customize-manifest.json](customize-manifest.json) file with your App ID.
-6. Edit [/src/index.js](./src/index.js) to map the data from Kintone to the chart.
-7. Run `npm run upload` to upload the JavaScript file to Kintone.
-8. Play with the Timeline chart!
+1. [Create a Kintone App using `presidents.csv` file](#step-1---create-a-kintone-app-using-presidentscsv-file)
+2. [Setup a Custom View](#step-2---setup-a-custom-view)
+3. [Grab the Login Credentials, View ID, and App ID](#step-3---grab-the-login-credentials-view-id-and-app-id)
+4. [Create a `.env` File](#step-4---create-a-env-file)
+5. [Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
+6. [Edit index.js - Input Kintone data into the chart](#step-6---edit-indexjs---input-kintone-data-into-the-chart)
+7. [Compile and upload the code to Kintone with `npm run build && npm run upload`](#step-7---compile-and-upload-the-code-to-kintone)
+8. [Play with the Timeline chart on your Kintone App 🎉](#step-8---play-with-the-timeline-chart-on-your-kintone-app-)
 
 ---
 
