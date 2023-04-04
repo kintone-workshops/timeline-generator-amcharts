@@ -19,6 +19,7 @@ Our free, live workshop will walk you through creating a Web Database App, setti
 * [Coding Time](#coding-time)
 * [Finish the Project](#finish-the-project)
 * [Debugging](#debugging)
+* [Completed Code](#completed-code)
 * [amCharts + Kintone References](#amcharts--kintone-references)
 
 
@@ -133,7 +134,7 @@ How to set the Field Codes for the Kintone App?
 | Wiki_URL   | `wiki`     |
 | Image_URL  | `image`    |
 
-### Step 2 - Create a Custom View <!-- omit in toc -->
+### Step 2 - Setup a Custom View <!-- omit in toc -->
 * From App Settings, click on the **Views** tab
 * Click on the Plus Button ⊕ to create a View
 * Select `Custom view` under **Visible Fields and Column Order** section
@@ -204,7 +205,7 @@ If this is NOT your first Kintone App, update the `app` value to your App ID.
 
 ---
 
-### Step 6 - Editing index.js - Input Kintone data into the chart <!-- omit in toc -->
+### Step 6 - Edit index.js - Input Kintone data into the chart <!-- omit in toc -->
 
 File: [/src/index.js](./src/index.js)
 * We access the database records from Kintone's `event.records` object.
@@ -303,7 +304,9 @@ npm install -g kintone-customize-uploader
 * Mac: `nodenv local 14.5.0`
 * Windows: `nvm use 14.5.0`
 
-### "npm run upload" failed? <!-- omit in toc -->
+Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
+
+### `npm run upload` failed? <!-- omit in toc -->
 _@kintone/customize-uploader not working?_ Let's try the following:
 
 (1) Verify that customize uploader was installed globally
@@ -320,6 +323,8 @@ _@kintone/customize-uploader not working?_ Let's try the following:
 (3) Verify your [customize-manifest.json](customize-manifest.json) was updated with the correct App ID
 * ⚙️ Details: [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
 
+(4) Verify that the `npm run build` command was run before `npm run upload`
+
 ### Uncaught Error: Target container is not a DOM element <!-- omit in toc -->
 Verify that the Custom View (Gallery View) has the following HTML Code:
 
@@ -334,6 +339,12 @@ Verify that the `# per page` setting is set to 100 for the amCharts Timeline to 
 ### Not seeing a highlighted `TODO:`? <!-- omit in toc -->
 Click on the `Install` button on the VS Code pop-up message to install [TODO Highlight extension](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight).
 * [![vscode-setting-extension.png](docs/img/vscode-setting-extension.png)](docs/img/vscode-setting-extension-HD.png)  
+
+---
+
+## Completed Code
+If you want the completed code for the index.js file, you can find it here:  
+[completed-index.js](/docs/completed-index.js)
 
 ---
 
