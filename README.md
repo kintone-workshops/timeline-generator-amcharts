@@ -19,6 +19,7 @@ Our free, live workshop will walk you through creating a Web Database App, setti
 * [Coding Time](#coding-time)
 * [Finish the Project](#finish-the-project)
 * [Debugging](#debugging)
+* [Completed Code](#completed-code)
 * [amCharts + Kintone References](#amcharts--kintone-references)
 
 
@@ -48,7 +49,7 @@ npm install -g @kintone/customize-uploader
 * Check the versions inside the `timeline-generator-amcharts` folder:
   * `node -v`
   * `npm -v`
-* Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
+* Not the correct versions or confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
 
 ⚡ Note: Please ignore the package deprecation warnings ⚡
 
@@ -82,20 +83,20 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ## Workshop Steps
 
-1. Create the Kintone App using the `presidents.csv` file
-2. Setup a Custom View
-3. Grab the Login Credentials, View ID, and App ID
-4. Create `.env` file by duplicating the [.env.example](.env.example) file
-5. Update line two in the [customize-manifest.json](customize-manifest.json) file with your App ID.
-6. Edit [/src/index.js](./src/index.js) to map the data from Kintone to the chart.
-7. Run `npm run upload` to upload the JavaScript file to Kintone.
-8. Play with the Timeline chart!
+1. [Create a Kintone App using the `presidents.csv` file](#step-1---create-a-kintone-app-using-the-presidentscsv-file-)
+2. [Setup a Custom View](#step-2---setup-a-custom-view-)
+3. [Grab the Login Credentials, View ID, and App ID](#step-3---grab-the-login-credentials-view-id-and-app-id-)
+4. [Create a `.env` File](#step-4---create-a-env-file-)
+5. [Update customize-manifest.json with the App ID](#step-5---update-customize-manifestjson-with-the-app-id-)
+6. [Edit index.js - Input Kintone data into the chart](#step-6---edit-indexjs---input-kintone-data-into-the-chart-)
+7. [Compile and upload the code to Kintone with `npm run build && npm run upload`](#step-7---compile-and-upload-the-code-to-kintone-)
+8. [Play with the Timeline chart on your Kintone App 🎉](#step-8---play-with-the-timeline-chart-on-your-kintone-app--)
 
 ---
 
 ## Create a Kintone Web Database App
 
-### Step 1 - Create a Kintone App using `presidents.csv` file <!-- omit in toc -->
+### Step 1 - Create a Kintone App using the `presidents.csv` file <!-- omit in toc -->
 
 | Step 01 ![Create_CSV_App_01](docs/img/Create_CSV_App_01.png) | Step 02 ![Create_CSV_App_02](docs/img/Create_CSV_App_02.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -111,7 +112,7 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 #### Set Field Codes <!-- omit in toc -->
 How to set the Field Codes for the Kintone App?
 1. Hover over the field
-1. Click on the top right gear icon ⚙️
+1. Click the top right gear icon ⚙️
 1. Select `Settings` from the drop-down menu
 1. Click the edit button ![Edit Button](docs/img/edit_button.png)
 1. Enter the new field code
@@ -133,11 +134,11 @@ How to set the Field Codes for the Kintone App?
 | Wiki_URL   | `wiki`     |
 | Image_URL  | `image`    |
 
-### Step 2 - Create a Custom View <!-- omit in toc -->
-* From App Settings, click on the **Views** tab
-* Click on the Plus Button ⊕ to create a View
+### Step 2 - Setup a Custom View <!-- omit in toc -->
+* From App Settings, Click the **Views** tab
+* Click the Plus Button ⊕ to create a View
 * Select `Custom view` under **Visible Fields and Column Order** section
-* Get the `View ID`! (Required in `.env` file)
+* Get the `View ID`! (Required in the `.env` file)
 * Under **HTML Code**, input:
 
    ```HTML
@@ -186,9 +187,9 @@ VIEW_ID="1234"
 ```
 
 #### ⚠️ DO NOT DELETE THE [.env.example](.env.example) FILE!  <!-- omit in toc --> <!-- omit in toc -->
-[.env.example](.env.example) is used by env-cmd to verify that `.env` file is correctly configured.
+[.env.example](.env.example) is used by env-cmd to verify that the `.env` file is correctly configured.
 
-### Step 5 - Update customize-manifest.json with App ID <!-- omit in toc -->
+### Step 5 - Update customize-manifest.json with the App ID <!-- omit in toc -->
 The Kintone Customize Uploader uses [customize-manifest.json](customize-manifest.json) to determine where to upload the JavaScript file (_which Kintone App_).
 
 ```json
@@ -204,7 +205,7 @@ If this is NOT your first Kintone App, update the `app` value to your App ID.
 
 ---
 
-### Step 6 - Editing index.js - Input Kintone data into the chart <!-- omit in toc -->
+### Step 6 - Edit index.js - Input Kintone data into the chart <!-- omit in toc -->
 
 File: [/src/index.js](./src/index.js)
 * We access the database records from Kintone's `event.records` object.
@@ -303,22 +304,26 @@ npm install -g kintone-customize-uploader
 * Mac: `nodenv local 14.5.0`
 * Windows: `nvm use 14.5.0`
 
-### "npm run upload" failed? <!-- omit in toc -->
+Not the correct versions or confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
+
+### `npm run upload` failed? <!-- omit in toc -->
 _@kintone/customize-uploader not working?_ Let's try the following:
 
 (1) Verify that customize uploader was installed globally
 * `npm install -g @kintone/customize-uploader`
 
 (2) Verify that the .env login info is correct (including the password)
-* ⚠️ Make sure your login info is inside `.env` file & **NOT** `.env.example` file!
+* ⚠️ Make sure your login info is inside the `.env` file & **NOT** the `.env.example` file!
 * ⚠️ Verify that KINTONE_BASE_URL input is correctly formatted:
   * ✅ Correct Format: `https://example.kintone.com`
   * ❌ Incorrect Format: `https://example.kintone.com/` or `example.kintone.com`
 * ⚠️ Re-run the npm commands after saving the .env file
-* ⚙️ Details: [Step 4 - Create a `.env` File](#step-4---create-a-env-file)
+* ⚙️ Details: [Step 4 - Create a `.env` File](#step-4---create-a-env-file-)
 
 (3) Verify your [customize-manifest.json](customize-manifest.json) was updated with the correct App ID
-* ⚙️ Details: [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id)
+* ⚙️ Details: [Step 5 - Update customize-manifest.json with the App ID](#step-5---update-customize-manifestjson-with-the-app-id-)
+
+(4) Verify that the `npm run build` command was run before the `npm run upload`
 
 ### Uncaught Error: Target container is not a DOM element <!-- omit in toc -->
 Verify that the Custom View (Gallery View) has the following HTML Code:
@@ -332,8 +337,14 @@ Verify that the `# per page` setting is set to 100 for the amCharts Timeline to 
 * [![Kintone-View-Setting-Record-Count.png](docs/img/Kintone-View-Setting-Record-Count.png)](docs/img/Kintone-View-Setting-Record-Count-HD.png)
 
 ### Not seeing a highlighted `TODO:`? <!-- omit in toc -->
-Click on the `Install` button on the VS Code pop-up message to install [TODO Highlight extension](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight).
+Click the `Install` button on the VS Code pop-up message to install [TODO Highlight extension](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight).
 * [![vscode-setting-extension.png](docs/img/vscode-setting-extension.png)](docs/img/vscode-setting-extension-HD.png)  
+
+---
+
+## Completed Code
+If you want the completed code for the index.js file, you can find it here:  
+[completed-index.js](/docs/completed-index.js)
 
 ---
 
