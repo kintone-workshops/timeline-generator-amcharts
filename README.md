@@ -49,7 +49,7 @@ npm install -g @kintone/customize-uploader
 * Check the versions inside the `timeline-generator-amcharts` folder:
   * `node -v`
   * `npm -v`
-* Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
+* Not the correct versions or confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
 
 ⚡ Note: Please ignore the package deprecation warnings ⚡
 
@@ -83,11 +83,11 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ## Workshop Steps
 
-1. [Create a Kintone App using `presidents.csv` file](#step-1---create-a-kintone-app-using-presidentscsv-file-)
+1. [Create a Kintone App using the `presidents.csv` file](#step-1---create-a-kintone-app-using-the-presidentscsv-file-)
 2. [Setup a Custom View](#step-2---setup-a-custom-view-)
 3. [Grab the Login Credentials, View ID, and App ID](#step-3---grab-the-login-credentials-view-id-and-app-id-)
 4. [Create a `.env` File](#step-4---create-a-env-file-)
-5. [Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id-)
+5. [Update customize-manifest.json with the App ID](#step-5---update-customize-manifestjson-with-the-app-id-)
 6. [Edit index.js - Input Kintone data into the chart](#step-6---edit-indexjs---input-kintone-data-into-the-chart-)
 7. [Compile and upload the code to Kintone with `npm run build && npm run upload`](#step-7---compile-and-upload-the-code-to-kintone-)
 8. [Play with the Timeline chart on your Kintone App 🎉](#step-8---play-with-the-timeline-chart-on-your-kintone-app--)
@@ -96,7 +96,7 @@ Check out the [slides.pdf](./slides.pdf) file for the workshop slides!
 
 ## Create a Kintone Web Database App
 
-### Step 1 - Create a Kintone App using `presidents.csv` file <!-- omit in toc -->
+### Step 1 - Create a Kintone App using the `presidents.csv` file <!-- omit in toc -->
 
 | Step 01 ![Create_CSV_App_01](docs/img/Create_CSV_App_01.png) | Step 02 ![Create_CSV_App_02](docs/img/Create_CSV_App_02.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -189,7 +189,7 @@ VIEW_ID="1234"
 #### ⚠️ DO NOT DELETE THE [.env.example](.env.example) FILE!  <!-- omit in toc --> <!-- omit in toc -->
 [.env.example](.env.example) is used by env-cmd to verify that `.env` file is correctly configured.
 
-### Step 5 - Update customize-manifest.json with App ID <!-- omit in toc -->
+### Step 5 - Update customize-manifest.json with the App ID <!-- omit in toc -->
 The Kintone Customize Uploader uses [customize-manifest.json](customize-manifest.json) to determine where to upload the JavaScript file (_which Kintone App_).
 
 ```json
@@ -304,7 +304,7 @@ npm install -g kintone-customize-uploader
 * Mac: `nodenv local 14.5.0`
 * Windows: `nvm use 14.5.0`
 
-Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
+Not the correct versions or confused? 🤔 → Check out the [Guide on Installing Node.js & npm](docs/Install_NodeJS_npm.md) Doc
 
 ### `npm run upload` failed? <!-- omit in toc -->
 _@kintone/customize-uploader not working?_ Let's try the following:
@@ -321,7 +321,7 @@ _@kintone/customize-uploader not working?_ Let's try the following:
 * ⚙️ Details: [Step 4 - Create a `.env` File](#step-4---create-a-env-file-)
 
 (3) Verify your [customize-manifest.json](customize-manifest.json) was updated with the correct App ID
-* ⚙️ Details: [Step 5 - Update customize-manifest.json with App ID](#step-5---update-customize-manifestjson-with-app-id-)
+* ⚙️ Details: [Step 5 - Update customize-manifest.json with the App ID](#step-5---update-customize-manifestjson-with-the-app-id-)
 
 (4) Verify that the `npm run build` command was run before `npm run upload`
 
