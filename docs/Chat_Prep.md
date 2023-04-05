@@ -29,6 +29,7 @@
 * [Why use Kintone?](#why-use-kintone)
 * [Step 6 - Editing index.js - Input Kintone data into the chart](#step-6---editing-indexjs---input-kintone-data-into-the-chart)
 * [Compile and upload the code to Kintone](#compile-and-upload-the-code-to-kintone)
+* [Check-in Time Slots](#check-in-time-slots)
 
 ---
 
@@ -368,3 +369,15 @@ chart.data = event.records.map((rec, index) => {
 npm run build && npm run upload
 
 =   =   =   =   =   =   =   =   =   =
+
+## Check-in Time Slots
+
+* 10:00 - Hello
+* 10:15 - Get Started
+* 10:30 - What is Kintone?
+* 10:45 - Create a Kintone App
+* 11:00 - 1 hour left
+* 11:15 - 45 min left
+* 11:30 - 30 min left
+* 11:45 - Wrap Up and Q&A
+* 12:00 - Thank you & Survey Raffle
