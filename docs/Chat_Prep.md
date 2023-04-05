@@ -31,6 +31,7 @@
 * [Compile and upload the code to Kintone](#compile-and-upload-the-code-to-kintone)
 * [Check-in Time Slots](#check-in-time-slots)
 * [Setup a Custom View](#setup-a-custom-view)
+* [Workshop Steps](#workshop-steps)
 
 ---
 
@@ -393,5 +394,35 @@ npm run build && npm run upload
 * Under `HTML Code`, input:
 
 <div id="root"></div>
+
+=   =   =   =   =   =   =   =   =   =
+
+## Workshop Steps
+
+If you are lost, we have wrote it all up in the GitHub Repo's README
+
+1. Create a Kintone App using the `presidents.csv` file
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-1---create-a-kintone-app-using-the-presidentscsv-file-
+
+2. Setup a Custom View
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-2---setup-a-custom-view-
+
+3. Grab the Login Credentials, View ID, and App ID
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-3---grab-the-login-credentials-view-id-and-app-id-
+
+4. Create a `.env` File
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-4---create-a-env-file-
+
+5. Update customize-manifest.json with the App ID
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-5---update-customize-manifestjson-with-the-app-id-
+
+6. Edit index.js - Input Kintone data into the chart
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-6---edit-indexjs---input-kintone-data-into-the-chart-
+
+7. Compile and upload the code to Kintone with `npm run build && npm run upload`
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-7---compile-and-upload-the-code-to-kintone-
+
+8. Play with the Timeline chart on your Kintone App 🎉
+→ https://github.com/kintone-workshops/timeline-generator-amcharts#step-8---play-with-the-timeline-chart-on-your-kintone-app--
 
 =   =   =   =   =   =   =   =   =   =
