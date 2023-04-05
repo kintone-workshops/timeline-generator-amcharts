@@ -426,3 +426,20 @@ If you are lost, we have wrote it all up in the GitHub Repo's README
 → https://github.com/kintone-workshops/timeline-generator-amcharts#step-8---play-with-the-timeline-chart-on-your-kintone-app--
 
 =   =   =   =   =   =   =   =   =   =
+
+Grab the Login Credentials, View ID, and App ID
+
+Where to get the Subdomain, View ID, and App ID?
+
+Go to your Kintone App's custom view & grab the URL
+Kintone App's URL follows this template:
+https://<SUBDOMAIN>.kintone.com/k/<App ID>/?view=<View ID>
+Example:
+
+https://example.kintone.com/k/1/?view=1234
+Subdomain = example
+KINTONE_BASE_URL = https://example.kintone.com
+App ID = 1
+View ID = 1234
+
+=   =   =   =   =   =   =   =   =   =
