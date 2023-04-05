@@ -73,7 +73,7 @@ https://kintone.dev/new
 ## Live on YouTube
 
 If you get lost, you can "rewind" on our lives stream on YouTube:
-https://www.youtube.com/watch?v=h7wjGbLM5fM
+https://youtube.com/live/EXhnk7hUP-I
 
 =   =   =   =   =   =   =   =   =   =
 
@@ -120,7 +120,7 @@ https://kintone.dev/new
 =   =   =   =   =   =   =   =   =   =
 
 This is also live on YouTube:
-https://www.youtube.com/watch?v=h7wjGbLM5fM
+https://youtube.com/live/EXhnk7hUP-I
 
 It is a bit delayed but for those who want to "rewind", this is another great option ~
 
@@ -251,7 +251,7 @@ https://forum.kintone.dev/
 
 Enter to WIN a $25 Amazon Gift Card! 💰️
 
-➡️ ➡️ ➡️ https://bit.ly/KDP23FEB ⬅️ ⬅️ ⬅️
+https://bma-events.typeform.com/to/D5D4MNxD
 
 Your feedback is vital for us to improve our workshop!
 Thank you for your time & input ~
