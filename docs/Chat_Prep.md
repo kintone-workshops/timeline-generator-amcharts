@@ -30,6 +30,7 @@
 * [Step 6 - Editing index.js - Input Kintone data into the chart](#step-6---editing-indexjs---input-kintone-data-into-the-chart)
 * [Compile and upload the code to Kintone](#compile-and-upload-the-code-to-kintone)
 * [Check-in Time Slots](#check-in-time-slots)
+* [Setup a Custom View](#setup-a-custom-view)
 
 ---
 
@@ -381,3 +382,16 @@ npm run build && npm run upload
 * 11:30 - 30 min left
 * 11:45 - Wrap Up and Q&A
 * 12:00 - Thank you & Survey Raffle
+
+=   =   =   =   =   =   =   =   =   =
+
+## Setup a Custom View
+* From App Settings, Click the `Views` tab
+* Click the Plus Button ⊕ to create a View
+* Select `Custom view` under `Visible Fields and Column Order` section
+* Get the `View ID`! (Required in the `.env` file)
+* Under `HTML Code`, input:
+
+<div id="root"></div>
+
+=   =   =   =   =   =   =   =   =   =
